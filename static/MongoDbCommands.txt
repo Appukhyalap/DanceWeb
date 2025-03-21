@@ -1,0 +1,35 @@
+//to insert the data
+db.insert({"name " : "Shantaveer"})
+//insert one with multiple objects
+db.items.insertOne({name : "Samsung 30s" , price : 22000 , rating : 4.5 } , qty:  233 , sold : 100})
+db.employee.insert([{name : "Shantaveer" , age : 20} , {name : "Mallikarjun" , age : 25 } , {name : "Chetan" , age : 24}])
+//accces all the data
+ db.items.find()
+ //find or search particular objects
+ db.items.find({price : 22000})
+ //search with applying filters
+ db.items.find({rating : {$gte : 3.5}})
+ //insert many objects at a time
+ db.items.insertMany([{name : "Moto" , price : 10000 , rating : 3.5  , quentity :  256 , sold : 567} ,{name : "Poco" , price : 67000 , rating : 3.5  , quentity :  678 , sold : 564}])
+ //acces data using and operator 
+ db.items.find({rating : {$gt : 3.5} , price : {$lt : 30000}}) // gte = greater than equal , lte = less than equal
+ //acces data using and operator 
+ db.items.find({ $or: [{rating : {$lte : 4.5}} , {price : {$lte : 22000}}]})
+ db.items.find({rating : {$lte : 3.5}} , {rating : 1})
+ //delete particular data like accessing data
+ deleteOne delete first matching entry in case of matching with multi document
+ db.items.deleteOne({price : 22000})
+ //DeleteMany will delete all the document which has matched with the filter
+ CRUD is a acronym that stands for create , read , update and delete these are the most basic operations that can be performed with traditional database system
+//updateOne will update or change the value of the document
+db.items.updateOne({age : 21} , {$set : {design : "AI Engineer"}})
+//db.update Many wiill chnage all the values which selectors we have selected
+db.items.updateMany({name : "Appu"} , {$set : {design : "data Analyst" , age : 25}})
+
+2. What is DigitalOcean?
+DigitalOcean is a cloud computing platform that provides virtual servers (droplets), databases, and storage solutions. It is widely used for hosting websites, applications, and databases.
+
+margin: auto; is used to center an element horizontally within its container. It works when:
+
+The element has a fixed width (e.g., width: 50% or width: 400px).
+The element is a block-level element (like <div>, <p>, <section>, etc.).

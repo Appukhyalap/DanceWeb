@@ -1,0 +1,55 @@
+dance academy
+
+doctype html
+html
+  head
+    title Harry Dance Academy
+    link(rel="stylesheet" href="style.css")
+  body
+    nav#navbar
+      ul
+        div#logo
+          img(src="")
+          | HDA
+        li #[a(href="/") Home]
+        li #[a(href="/") About]
+        li #[a(href="/") Services]
+        li #[a(href="/") Class Info]
+        li #[a(href="/") Contact Us]
+
+    section#introSection
+      div.welcome Welcome to Harry's Dance Academy
+      div.small Eat Sleep Dance Repeat
+
+    section#missionSection
+      h2 Our Mission
+      -
+        var cards = [{
+          title: 'Dance Perfection',
+          img: '/static/img/1.png',
+          desc: 'Perfect your dance moves at the best academy in the universe.'
+        }, {
+          title: 'Dance the way you like',
+          img: '/static/img/2.png',
+          desc: 'Learn a variety of styles with world-class instructors.'
+        }, {
+          title: 'Expert Teaching',
+          img: '/static/img/3.png',
+          desc: 'Receive expert guidance and personalized training.'
+        }]
+      each card in cards
+        div.card
+          h3= card.title
+          div.card-box
+            div.card-img
+              img(src=card.img alt=`${card.title} Image`)
+            div.card-content
+              p= card.desc
+
+    section#sponsorsSection
+      h2 Our Sponsors
+      // Add sponsor logos or names here
+
+    footer#footer
+      p 2025 Harry Dance Academy. All rights reserved.
+      p Follow us: #[a(href="https://facebook.com") Facebook] | #[a(href="https://twitter.com") Twitter] | #[a(href="https://instagram.com") Instagram]
