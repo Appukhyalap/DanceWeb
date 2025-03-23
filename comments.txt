@@ -38,3 +38,13 @@ mongodb://Shantaveer:<db_password>@cluster0-shard-00-00.tx6by.mongodb.net:27017,
   },
 
 node --watch .\app.js // always run in background dont need to switch on off
+
+3. git init
+4. git add .
+5. git commit -m "type_your_message"
+6. add remote // files go to git and create new repository
+7. copy the code like(git remote add origin https://github.com/Appukhyalap/dance.git
+                      git branch -M main
+                      git push -u origin main)
+8. come to git and refresh 
+9. come to render 
