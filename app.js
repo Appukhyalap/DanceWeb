@@ -81,7 +81,7 @@
 // }).then(() => console.log("✅ MongoDB Connected"))
 //   .catch(err => console.log("❌ MongoDB Connection Error:", err));
 
-// // ✅ Define Schema
+// // Define Schema
 // const contactSchema = new mongoose.Schema({
 //     name: String,
 //     phone: String,
@@ -91,14 +91,14 @@
 // });
 // const Contact = mongoose.model('Contact', contactSchema);
 
-// // ✅ Serve Contact Page
+// // Serve Contact Page
 // app.get("/contact", (req, res) => {
 //     res.sendFile(path.join(__dirname, "public/views/contact.html"));
 // });
 
-// // ✅ Handle Form Submission (POST Request)
+// // Handle Form Submission (POST Request)
 // app.post("/contact", async (req, res) => {
-//     console.log("📩 Received Form Data:", req.body);
+//     console.log("Received Form Data:", req.body);
 
 //     if (!req.body.name || !req.body.phone || !req.body.email || !req.body.address || !req.body.concern) {
 //         return res.status(400).json({ message: "❌ All fields are required!" });
@@ -107,42 +107,42 @@
 //     try {
 //         const myData = new Contact(req.body);
 //         await myData.save();
-//         res.status(200).json({ message: "✅ Form submitted successfully!" });
+//         res.status(200).json({ message: "Form submitted successfully!" });
 //     } catch (error) {
-//         console.error("❌ Error saving data:", error);
-//         res.status(500).json({ message: "❌ Internal Server Error." });
+//         console.error("Error saving dat", error);
+//         res.status(500).json({ message: " Internal Server Error." });
 //     }
 // });
 
-// // ✅ Start the server
+// // Start the server
 // app.listen(PORT, () => {
-//     console.log(`🚀 Server running at http://localhost:${PORT}`);
+//     console.log(` Server running at http://localhost:${PORT}`);
 // });
 
 const express = require('express');
-const cors = require('cors'); // ✅ Import CORS
+const cors = require('cors'); // Import CORS
 const app = express();
 const path = require('path');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 
-const PORT = 5500;
+const PORT = 5500
 
-// ✅ Use CORS to allow requests from different origins
+// Use CORS to allow requests from different origins
 app.use(cors({
     origin: '*', // Allows all origins (Change it to specific domain in production)
     methods: ['GET', 'POST'], // Allow only GET and POST
     allowedHeaders: ['Content-Type']
 }));
 
-// ✅ MongoDB Connection
+// MongoDB Connection
 mongoose.connect('mongodb://localhost:27017/contactDance', { 
         useNewUrlParser: true, 
         useUnifiedTopology: true 
     }).then(() => console.log("✅ MongoDB Connected"))
-      .catch(err => console.log("❌ MongoDB Connection Error:", err));
+      .catch(err => console.log(" MongoDB Connection Error:", err));
 
-// ✅ Contact Schema
+// Contact Schema
 const contactSchema = new mongoose.Schema({
     name: String,
     phone: String,
@@ -152,23 +152,23 @@ const contactSchema = new mongoose.Schema({
 });
 const Contact = mongoose.model('Contact', contactSchema);
 module.export = Contact;
-
-// ✅ Middleware
+ 
+// Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 // ✅ Routes
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "app.html"));
+app.get("/index", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
 });
 
 app.get("/contact", (req, res) => {
-    res.sendFile(path.join(__dirname, "views/contact.html"));
+    res.sendFile(path.join(__dirname, "/views/contact.html"));
 });
 
 app.post("/contact", async (req, res) => {
-    console.log("📥 Received Data:", req.body);
+    console.log("Received Data:", req.body);
 
     try {
         const contactData = new Contact(req.body);
@@ -176,8 +176,8 @@ app.post("/contact", async (req, res) => {
         console.log("✅ Data saved in MongoDB:", savedData);
 
         res.status(200).json({ message: "Form submitted successfully!", data: savedData });
-    } catch (error) {
-        console.error("❌ Error Saving Data:", error);
+    } catch (error) { 
+        console.error("Error Saving Data:", error);
         res.status(500).json({ message: "Error saving data" });
     }
 });
@@ -186,5 +186,5 @@ app.post("/contact", async (req, res) => {
 
 // ✅ Start Server
 app.listen(PORT, () => {
-    console.log(`🚀 Server running at http://localhost:${PORT}`);
+    console.log (`Server running at http://localhost:${PORT}`);
 });

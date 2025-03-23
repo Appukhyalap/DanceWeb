@@ -1,0 +1,40 @@
+
+
+
+const { MongoClient, ServerApiVersion } = require('mongodb');
+const uri = "mongodb+srv://Shantaveer:<db_password>@cluster0.tx6by.mongodb.net/?appName=Cluster0";
+
+// Create a MongoClient with a MongoClientOptions object to set the Stable API version
+const client = new MongoClient(uri, {
+  serverApi: {
+    version: ServerApiVersion.v1,
+    strict: true,
+    deprecationErrors: true,
+  }
+});
+
+async function run() {
+  try {
+    // Connect the client to the server	(optional starting in v4.7)
+    await client.connect();
+    // Send a ping to confirm a successful connection
+    await client.db("admin").command({ ping: 1 });
+    console.log("Pinged your deployment. You successfully connected to MongoDB!");
+  } finally {
+    // Ensures that the client will close when you finish/error
+    await client.close();
+  }
+}
+run().catch(console.dir);
+
+
+
+mongodb://Shantaveer:<db_password>@cluster0-shard-00-00.tx6by.mongodb.net:27017,cluster0-shard-00-01.tx6by.mongodb.net:27017,cluster0-shard-00-02.tx6by.mongodb.net:27017/?replicaSet=atlas-35073i-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority&appName=Cluster0
+
+1. install packet.json
+2. // Add to package .json "scripts": {
+    "start": "node app.js",
+    "dev" : "node --watch app.js"
+  },
+
+node --watch .\app.js // always run in background dont need to switch on off

@@ -5,7 +5,8 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev" : "node --watch app.js"
+    
   },
   "author": "harry bhai",
   "license": "ISC",
@@ -19,5 +20,14 @@
     "parser": "^0.1.4",
     "pug": "^3.0.3"
   },
-  "keywords": []
+  "keywords": [],
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Appukhyalap/Dance-Website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Appukhyalap/Dance-Website/issues"
+  },
+  "homepage": "https://github.com/Appukhyalap/Dance-Website#readme"
 }

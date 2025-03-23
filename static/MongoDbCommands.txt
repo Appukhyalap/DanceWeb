@@ -32,4 +32,12 @@ DigitalOcean is a cloud computing platform that provides virtual servers (drople
 margin: auto; is used to center an element horizontally within its container. It works when:
 
 The element has a fixed width (e.g., width: 50% or width: 400px).
-The element is a block-level element (like <div>, <p>, <section>, etc.).
+The element is a block-level element (like <div>, <p>, <section>, etc.). 
+
+
+
+
+Github Commands 
+to add all the files :  git add . 
+to commit messages : git commit -m "Type_your message here" 
+to push the changes : git push -u origin main 
