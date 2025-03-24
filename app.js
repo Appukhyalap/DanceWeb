@@ -136,10 +136,11 @@ app.use(cors({
 }));
 
 // MongoDB Connection
-mongoose.connect('mongodb://localhost:27017/contactDance', { 
-        useNewUrlParser: true, 
-        useUnifiedTopology: true 
-    }).then(() => console.log("✅ MongoDB Connected"))
+mongoose.connect('mongodb+srv://Shantaveer:BNJVS8SfYcMVaKNJ@cluster0.tx6by.mongodb.net/Shantaveer?retryWrites=true&w=majority&appName=Cluster0', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+})
+.then(() => console.log("✅ MongoDB Connected"))
       .catch(err => console.log(" MongoDB Connection Error:", err));
 
 // Contact Schema
@@ -159,8 +160,8 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, "public")));
 
 // ✅ Routes
-app.get("/index", (req, res) => {
-    res.sendFile(path.join(__dirname, "index.html"));
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "app.html"));
 });
 
 app.get("/contact", (req, res) => {

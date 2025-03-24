@@ -27,10 +27,13 @@ async function run() {
 }
 run().catch(console.dir);
 
+USERNME : USER1
+PASS : YG7RE7YY
+mongodb://Shantaveer:<db_password>@cluster0-shard-00-00.tx6by.mongodb.net:27017,cluster0-shard-00-01.tx6by.mongodb.net:27017,cluster0-shard-00-02.tx6by.mongodb.net:27017/?replicaSet=atlas-35073i-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority
+&appName=Cluster0
 
 
-mongodb://Shantaveer:<db_password>@cluster0-shard-00-00.tx6by.mongodb.net:27017,cluster0-shard-00-01.tx6by.mongodb.net:27017,cluster0-shard-00-02.tx6by.mongodb.net:27017/?replicaSet=atlas-35073i-shard-0&ssl=true&authSource=admin&retryWrites=true&w=majority&appName=Cluster0
-
+npm init -y //install package.json
 1. install packet.json
 2. // Add to package .json "scripts": {
     "start": "node app.js",
