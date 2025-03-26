@@ -40,7 +40,7 @@ npm init -y //install package.json
     "dev" : "node --watch app.js"
   },
 
-node --watch .\app.js // always run in background dont need to switch on off
+node --watch .\app.js // always run in background dont need to switch on off when we make changes
 
 3. git init
 4. git add .
