@@ -165,7 +165,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("/contact", (req, res) => {
-    res.sendFile(path.join(__dirname, "/views/contact.html"));
+    res.sendFile(path.join(__dirname, "public/views/contact.html"));
 });
 
 app.post("/contact", async (req, res) => {
