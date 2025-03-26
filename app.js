@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 5500;
 
 // ✅ Enable CORS for frontend communication
 app.use(cors({
-    origin: 'https://danceweb-igy7.onrender.com', // Change '*' to your frontend URL in production
+    origin: '*', // Change '*' to your frontend URL in production
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type'],
     credentials: true
