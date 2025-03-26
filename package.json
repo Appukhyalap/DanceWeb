@@ -5,15 +5,15 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev" : "node --watch app.js"
-    
+    "dev": "node --watch app.js"
   },
   "author": "harry bhai",
   "license": "ISC",
-  "dependencies": { 
+  "dependencies": {
     "body": "^5.1.0",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "mongoose": "^8.12.1",
     "nodemon": "^3.1.9",
@@ -21,7 +21,6 @@
     "pug": "^3.0.3"
   },
   "keywords": [],
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Appukhyalap/Dance-Website.git"
