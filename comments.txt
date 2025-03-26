@@ -51,3 +51,5 @@ node --watch .\app.js // always run in background dont need to switch on off whe
                       git push -u origin main)
 8. come to git and refresh 
 9. come to render 
+
+git remote remove origin --> (To Remove a Repo)
