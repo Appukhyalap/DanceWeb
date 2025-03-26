@@ -16,7 +16,7 @@ app.use(cors({
 }));
 
 // ✅ MongoDB Connection
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/contactDance';
+const MONGO_URI ="mongodb+srv://Shantaveer:BNJVS8SfYcMVaKNJ@cluster0.tx6by.mongodb.net/Shantaveer?retryWrites=true&w=majority&appName=Cluster0";
 mongoose.connect(MONGO_URI, { 
     useNewUrlParser: true, 
     useUnifiedTopology: true 
