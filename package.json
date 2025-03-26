@@ -10,7 +10,7 @@
   },
   "author": "harry bhai",
   "license": "ISC",
-  "dependencies": {
+  "dependencies": { 
     "body": "^5.1.0",
     "body-parser": "^1.20.3",
     "cors": "^2.8.5",
